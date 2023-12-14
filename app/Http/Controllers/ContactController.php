@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -20,6 +21,8 @@ class ContactController extends Controller
             'email' => 'required|email',
             'message' => 'required|min:5',
         ]);
-        Mail::to('receipentemail@gmail.com')-send()
+        Mail::to('receipentemail@gmail.com') - send(new ContactUs($data));
+
+        dd('sent');
     }
 }
