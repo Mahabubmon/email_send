@@ -31,7 +31,7 @@ class ContactUs extends Mailable
     {
         return new Envelope(
             subject: 'Contact Us',
-            from: new Address('begumanna461@gmail.com', 'Anna'),
+            from: new Address('begumanna461@gmail.com', 'Anna')
         );
     }
 
